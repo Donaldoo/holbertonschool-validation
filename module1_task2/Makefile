@@ -1,7 +1,7 @@
 build: ## Generates a website using hugo
 	hugo
 
-clean:	## Cleanup the content of the directory dist/
+clean: ## Cleanup the content of the directory dist/
 	rm -rf ./dist
 
 post: ## Create a post with filename and title using the env var POST_TITLE and POST_NAME

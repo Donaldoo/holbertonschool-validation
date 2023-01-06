@@ -10,3 +10,6 @@ post: 	## Create a post with filename and title using the env var POST_TITLE and
 
 help: 	## Shows usage help
 		@fgrep -h "##" $(MAKEFILE_LIST) | fgrep -v fgrep | sed -e 's/\\$$//' | sed -e 's/##//'
+
+lint:	## Lint
+		shellcheck setup.sh

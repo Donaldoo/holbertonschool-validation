@@ -17,7 +17,6 @@
 - test code
 - lint
 - install tools
-- unit test
 - help
 - build
 

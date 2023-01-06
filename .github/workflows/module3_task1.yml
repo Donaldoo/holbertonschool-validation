@@ -17,4 +17,4 @@ jobs:
           ./setup.sh
 
       - name: Build
-        run: make build -C module3_task0
+        run: make build -C module3_task1

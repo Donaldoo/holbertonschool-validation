@@ -12,3 +12,10 @@
 - build
 - post 
 - help
+
+## Workflow
+- lint
+- install tools
+- unit test
+- help
+- build

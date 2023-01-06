@@ -14,6 +14,7 @@
 - help
 - unit-tests
 - package
+- integration-tests
 
 ## Workflow
 - test code

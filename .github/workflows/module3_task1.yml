@@ -14,5 +14,5 @@ jobs:
       - name: Install required tools
         run: cd module3_task1 && ./setup.sh
 
-      - name: Build
+      - name: Build command
         run: make build -C module3_task1

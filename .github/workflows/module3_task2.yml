@@ -18,7 +18,7 @@ jobs:
         run: cd module3_task2 && sudo ./setup.sh
 
       - name: install markdownlint
-        run: npm install markdownlint-cli
+        run: cd module3_task2 && gem install mdl
 
       - name: Unit test
         run: sudo make unit-tests -C module3_task2

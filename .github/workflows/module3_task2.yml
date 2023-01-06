@@ -24,7 +24,10 @@ jobs:
         run: sudo make unit-tests -C module3_task2
 
       - name: test2
-        run: sudo make integration-tests -C module3_task1
+        run: sudo make integration-tests -C module3_task2
+
+      - name: validate
+        run: sudo make validate -C module3_task2
 
       - name: help
         run: sudo make help -C module3_task2

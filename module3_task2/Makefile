@@ -20,5 +20,8 @@ unit-tests:	## test
 integration-tests:	## test
 			ls
 
+validate:	## validate
+		ls
+
 package:	## package
 		zip awesome-website.zip dist/

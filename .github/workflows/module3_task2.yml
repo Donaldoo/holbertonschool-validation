@@ -18,7 +18,7 @@ jobs:
         run: cd module3_task1 && sudo ./setup.sh
 
       - name: lint
-        run: markdownlint README.md DEPLOY.md
+        run: sudo make lint -C module3_task2
 
       - name: Unit test
         run: sudo make unit-tests -C module3_task2

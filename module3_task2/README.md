@@ -12,6 +12,8 @@
 - build
 - post 
 - help
+- unit-tests
+- package
 
 ## Workflow
 - test code

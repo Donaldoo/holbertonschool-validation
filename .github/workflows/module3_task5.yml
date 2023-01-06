@@ -52,7 +52,7 @@ jobs:
             module3_task5/DEPLOY.md
             module3_task5/awesome-website.zip
 
-      - name: netlify
+      - name: Deploy to Netlify
         uses: nwtgck/actions-netlify@v1.2
         with:
           publish-dir: './module3_task5/dist'
@@ -65,5 +65,5 @@ jobs:
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
-          timeout-minutes: 1
+        timeout-minutes: 1
 ...

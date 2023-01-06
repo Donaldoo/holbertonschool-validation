@@ -23,6 +23,9 @@ jobs:
           sudo gem install chef-utils -v 16.6.14
           sudo gem install mdl -v 0.11.0
 
+      - name: lint
+        run: sudo make lint -C module3_task2/
+
       - name: Unit test
         run: sudo make unit-tests -C module3_task2
 
@@ -40,7 +43,4 @@ jobs:
 
       - name: package
         run: sudo make package -C module3_task2
-
-      - name: lint
-        run: sudo make lint -C module3_task2
 ...

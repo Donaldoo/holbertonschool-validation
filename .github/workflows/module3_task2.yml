@@ -20,8 +20,8 @@ jobs:
       - name: lint
         run: markdownlint README.md DEPLOY.md
 
-      - name: test
-        run: sudo make unit-test -C module3_task2
+      - name: Unit test
+        run: sudo make unit-tests -C module3_task2
 
       - name: test2
         run: sudo make integration-tests -C module3_task1

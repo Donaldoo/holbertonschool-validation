@@ -1,12 +1,10 @@
+---
 name: module3_task0
 
 on:
   schedule:
   - cron: "0 0 0 * * ?"
-  push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
+  [push]
 
 jobs:
   build:
@@ -14,7 +12,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v3
+    - name: Clone repository
+      uses: actions/checkout@v3
 
     - name: validate that the Makefile is present
       run: make help
+...

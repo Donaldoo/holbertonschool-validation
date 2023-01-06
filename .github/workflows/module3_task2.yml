@@ -18,7 +18,7 @@ jobs:
         run: cd module3_task2 && sudo ./setup.sh
 
       - name: install markdownlint
-        run: cd module3_task2 && sudo gem install chef-utils -v 16.6.14 && sudo gem install mdl
+        run: cd module3_task2 && sudo gem install chef-utils -v 16.6.14 && gem install mdl -v 0.11.0
 
       - name: Unit test
         run: sudo make unit-tests -C module3_task2

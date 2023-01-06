@@ -24,4 +24,4 @@ validate:	## validate
 		ls
 
 package:	## package
-		zip awesome-website.zip dist/
+		zip -r awesome-website.zip dist/

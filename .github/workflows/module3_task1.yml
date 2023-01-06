@@ -14,8 +14,5 @@ jobs:
       - name: Lint
         run: make lint -C module3_task1
 
-      - name: Install required tools
-        run: cd module3_task1 && sudo ./setup.sh
-
       - name: Build
         run: make build -C module3_task1

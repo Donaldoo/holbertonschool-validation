@@ -8,6 +8,7 @@
 - create makefile
 
 ## Lifecycle
+
 - clean
 - build
 - post 
@@ -16,4 +17,5 @@
 - package
 
 ## Workflow
+
 - test2

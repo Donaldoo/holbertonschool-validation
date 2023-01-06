@@ -8,6 +8,7 @@
 - create makefile
 
 ## Lifecycle
+
 - clean
 - build
 - post 
@@ -18,6 +19,7 @@
 - validate
 
 ## Workflow
+
 - test code
 - lint
 - install tools
@@ -25,4 +27,5 @@
 - build
 
 ## Build Workflow
+
 - package

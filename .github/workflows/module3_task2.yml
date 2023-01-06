@@ -14,11 +14,11 @@ jobs:
       - name: Clone repository
         uses: actions/checkout@v3
 
-      - name: lint
-        run: sudo make lint -C module3_task2
-
       - name: Install required tools
         run: cd module3_task1 && sudo ./setup.sh
+
+      - name: lint
+        run: markdownlint README.md DEPLOY.md
 
       - name: test
         run: sudo make unit-test -C module3_task2

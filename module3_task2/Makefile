@@ -14,7 +14,7 @@ help: 	## Shows usage help
 lint:	## lint
 	shellcheck setup.sh
 
-unit-test:	## test
+unit-tests:	## test
 		ls
 
 integration-tests:	## test

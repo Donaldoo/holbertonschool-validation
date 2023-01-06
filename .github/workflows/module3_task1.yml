@@ -13,7 +13,7 @@ jobs:
 
       - name: Permissions granted
         run: chmod 666 /home/runner/work/holbertonschool-validation/holbertonschool-validation/module3_task1/dist/index.html && chmod 666 /home/runner/work/holbertonschool-validation/holbertonschool-validation/module3_task1/dist/posts/index.html && chmod 666 /home/runner/work/holbertonschool-validation/holbertonschool-validation/module3_task1/dist/posts/page/1/index.html && chmod 666 /home/runner/work/holbertonschool-validation/holbertonschool-validation/module3_task1/dist/posts/welcome/index.html
-v
+
       - name: Install required tools
         run: cd module3_task1 && sudo ./setup.sh
 

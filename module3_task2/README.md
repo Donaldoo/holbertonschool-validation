@@ -15,6 +15,7 @@
 - unit-tests
 - package
 - integration-tests
+- validate
 
 ## Workflow
 - test code

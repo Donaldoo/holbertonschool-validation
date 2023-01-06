@@ -14,8 +14,12 @@
 - help
 
 ## Workflow
+- test code
 - lint
 - install tools
 - unit test
 - help
 - build
+
+## Build Workflow
+- package

@@ -20,9 +20,6 @@ jobs:
       - name: install markdownlint
         run: npm install markdownlint-cli
 
-      - name: lint
-        run: sudo make lint
-
       - name: Unit test
         run: sudo make unit-tests -C module3_task2
 

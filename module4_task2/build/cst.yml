@@ -1,0 +1,4 @@
+fileExistenceTests:
+- name: 'Dockerfile'
+  path: '/'
+  shouldExist: true

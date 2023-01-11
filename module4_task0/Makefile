@@ -1,5 +1,6 @@
 build: 	## Generates a website using hugo
 		hugo
+		touch awesome-api
 
 clean: 	## Cleanup the content of the directory dist/
 		rm -rf ./dist
@@ -12,16 +13,17 @@ help: 	## Shows usage help
 		@fgrep -h "##" $(MAKEFILE_LIST) | fgrep -v fgrep | sed -e 's/\\$$//' | sed -e 's/##//'
 
 lint:	## lint
-	cat setup.sh
+		cat setup.sh
 
 unit-tests:	## test
-		ls
-
-integration-tests:	## test
 			ls
 
+integration-tests:	## test
+					ls
+
 validate:	## validate
-		ls
+			ls
 
 package:	## package
-		zip awesome-website.zip dist/
+			make build
+			zip awesome-website.zip dist/

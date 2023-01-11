@@ -17,6 +17,8 @@
 - package
 - integration-tests
 - validate
+- build-docker
+- docker-tests
 
 ## Workflow
 

@@ -28,5 +28,5 @@ validate:	## validate
 		ls
 
 package:	## package
-		make build
+		hugo
 		zip awesome-website.zip awesome-api dist/

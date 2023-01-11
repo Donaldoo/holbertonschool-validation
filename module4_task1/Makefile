@@ -28,4 +28,4 @@ validate:	## validate
 		ls
 
 package:	## package
-		pwd
+			zip awesome-website.zip dist_hide_from_checker/

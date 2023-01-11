@@ -18,7 +18,7 @@ help: 	## Shows usage help
 		@fgrep -h "##" $(MAKEFILE_LIST) | fgrep -v fgrep | sed -e 's/\\$$//' | sed -e 's/##//'
 
 lint:	## lint
-	hadolint ./build/Dockfile
+	hadolint ./build/Dockerfile
 
 unit-tests:	## test
 		ls

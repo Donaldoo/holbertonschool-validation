@@ -1,7 +1,3 @@
-install-hugo:	## install hugo
-				curl -Lo install_hugo.deb https://github.com/gohugoio/hugo/releases/download/v0.109.0/hugo_extended_0.109.0_linux-amd64.deb
-				sudo apt-get install ./install_hugo.deb
-
 build: 	## Generates a website using hugo
 		hugo
 		touch awesome-api
@@ -32,5 +28,4 @@ validate:	## validate
 		ls
 
 package:	## package
-		sudo hugo
-		zip awesome-website.zip awesome-api dist/
+		pwd

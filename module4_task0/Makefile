@@ -21,7 +21,7 @@ unit-tests:	## test
 
 integration-tests:	## test
 					ls
-					coverage-integrations.out
+					touch coverage-integrations.out
 
 validate:	## validate
 			ls

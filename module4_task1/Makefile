@@ -1,5 +1,6 @@
 build: 	## Generates a website using hugo
 		hugo
+		touch awesome-api
 
 build-docker:	## build docker container
 				docker build -t awesome:build ./build
@@ -15,7 +16,7 @@ help: 	## Shows usage help
 		@fgrep -h "##" $(MAKEFILE_LIST) | fgrep -v fgrep | sed -e 's/\\$$//' | sed -e 's/##//'
 
 lint:	## lint
-	cat setup.sh
+		cat setup.sh
 
 unit-tests:	## test
 		ls
@@ -27,4 +28,5 @@ validate:	## validate
 		ls
 
 package:	## package
-		zip awesome-website.zip dist_hide_from_checker/
+		make build
+		zip awesome-website.zip dist/

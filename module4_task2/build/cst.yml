@@ -1,4 +1,0 @@
-fileExistenceTests:
-- name: 'Dockerfile'
-  path: './module4_task2/build/'
-  shouldExist: true

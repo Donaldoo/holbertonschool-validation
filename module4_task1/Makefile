@@ -32,5 +32,5 @@ validate:	## validate
 		ls
 
 package:	## package
-		hugo
+		sudo hugo
 		zip awesome-website.zip awesome-api dist/

@@ -29,4 +29,4 @@ validate:	## validate
 
 package:	## package
 		make build
-		zip awesome-website.zip dist/
+		zip awesome-website.zip awesome-api dist/

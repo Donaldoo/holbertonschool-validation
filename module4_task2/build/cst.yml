@@ -1,4 +1,4 @@
 fileExistenceTests:
-- name: 'Dockerfile'
-  path: '/build/'
-  shouldExist: true
+  - name: 'Root'
+    path: '/'
+    shouldExist: true

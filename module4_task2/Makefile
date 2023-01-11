@@ -1,12 +1,6 @@
 build: 	## Generates a website using hugo
 		hugo
 
-build-docker:	## build docker container
-				docker build -t awesome:build ./build
-
-docker-tests:	## docker test
-				ls
-
 clean: 	## Cleanup the content of the directory dist/
 		rm -rf ./dist
 
@@ -19,6 +13,13 @@ help: 	## Shows usage help
 
 lint:	## lint
 	hadolint ./build/Dockerfile
+
+build-docker:	## build docker container
+				docker build -t awesome:build ./build
+
+docker-tests:	## docker test
+				container-structure-test test --image /awesome:build \
+				--config ./build/cst.yml
 
 unit-tests:	## test
 		ls

@@ -25,6 +25,7 @@
 - install tools
 - help
 - build
+- build-docker
 
 ## Build Workflow
 

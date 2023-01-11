@@ -17,9 +17,11 @@ lint:	## lint
 
 unit-tests:	## test
 			ls
+			touch coverage-units.out
 
 integration-tests:	## test
 					ls
+					touch coverage-units.out
 
 validate:	## validate
 			ls

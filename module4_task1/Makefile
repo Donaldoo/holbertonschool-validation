@@ -1,6 +1,9 @@
 build: 	## Generates a website using hugo
 		hugo
 
+build-docker:	## build docker container
+				docker build -t awesome:build ./build
+
 clean: 	## Cleanup the content of the directory dist/
 		rm -rf ./dist
 

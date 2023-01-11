@@ -8,4 +8,3 @@ RUN wget https://github.com/gohugoio/hugo/releases/download/v0.109.0/hugo_extend
 COPY . .
 CMD ["hugo"]
 CMD ["hugo", "server"]
-EXPOSE 8000

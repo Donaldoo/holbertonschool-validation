@@ -27,7 +27,7 @@ jobs:
         run: sudo make lint -C module4_task2
 
       - name: docker-tests
-        run: sudo make docker-tests -C module4_task2
+        run: sudo make docker-tests -C module4_task2/build
 
       - name: Unit test
         run: sudo make unit-tests -C module4_task2

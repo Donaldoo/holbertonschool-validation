@@ -16,7 +16,8 @@ lint:	## lint
 		cat setup.sh
 
 unit-tests:	## test
-			ls
+			make build
+			make clean
 			touch coverage-units.out
 
 integration-tests:	## test

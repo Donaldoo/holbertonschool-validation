@@ -1,4 +1,5 @@
 build: 	## Generates a website using hugo
+		hugo
 		touch awesome-api
 
 build-docker:	## build docker container
@@ -28,4 +29,5 @@ validate:	## validate
 		ls
 
 package:	## package
-			zip awesome-website.zip module4_task1/dist/
+			make build
+			zip awesome-website.zip /dist/

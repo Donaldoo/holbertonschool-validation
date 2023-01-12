@@ -12,13 +12,13 @@ help: 	## Shows usage help
 		@fgrep -h "##" $(MAKEFILE_LIST) | fgrep -v fgrep | sed -e 's/\\$$//' | sed -e 's/##//'
 
 lint:	## lint
-		hadolint ./buid/Dockerfile
+		hadolint ./build/Dockerfile
 
 build-docker:	## build docker container
-				docker build -t awesome:build ./buid
+				docker build -t awesome:build ./build
 
 docker-tests:	## docker test
-				container-structure-test test --image awesome:build --config ./buid/cst.yml
+				container-structure-test test --image awesome:build --config ./build/cst.yml
 unit-tests:	## test
 		ls
 

@@ -16,8 +16,6 @@ lint:	## lint
 		cat setup.sh
 
 unit-tests:	## test
-			make build
-			make clean
 			touch coverage-units.out
 
 integration-tests:	## test
@@ -28,5 +26,4 @@ validate:	## validate
 			ls
 
 package:	## package
-			make build
-			zip awesome-website.zip dist/
+			zip awesome-website.zip dist_t/

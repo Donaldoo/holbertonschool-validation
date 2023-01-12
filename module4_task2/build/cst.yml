@@ -2,7 +2,7 @@
 schemaVersion: 2.0.0
 
 fileExistenceTests:
-- name: 'Root'
-  path: '/'
-  shouldExist: true
+- name: 'no go binary'
+  path: '/usr/bin/go'
+  shouldExist: false
 ...

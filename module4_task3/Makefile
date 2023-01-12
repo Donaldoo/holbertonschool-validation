@@ -38,4 +38,4 @@ validate:	## validate
 
 package:	## package
 			make build
-			zip awesome-website.zip dist_hide_from_checker/
+			zip awesome-website.zip dist/

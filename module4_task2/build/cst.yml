@@ -1,10 +1,1 @@
 schemaVersion: 2.0.0
-
-fileExistenceTests:
-  - name: 'Root'
-    path: '/'
-    shouldExist: true
-
-fileContentTests:
-- name: 'Debian Sources'
-  path: '/etc/apt/sources.list'

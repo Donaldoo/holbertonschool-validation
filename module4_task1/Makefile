@@ -15,6 +15,9 @@ help: 	## Shows usage help
 lint:	## lint
 		cat setup.sh
 
+build-docker:	## build docker container
+				docker build -t awesome:build ./build
+
 unit-tests:	## test
 			touch coverage-units.out
 

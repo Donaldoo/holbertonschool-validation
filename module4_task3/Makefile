@@ -24,8 +24,7 @@ build-docker:	## build docker container
 
 docker-tests:	## docker test
 				container-structure-test test --image awesome:build --config ./build/cst.yml
-			   
-## container-structure-test test --image awesome:build --config cst.yml
+				container-structure-test test --image awesome:build --config cst.yml
 				
 unit-tests:	## test
 		ls

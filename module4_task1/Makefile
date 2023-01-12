@@ -2,9 +2,6 @@ build: 	## Generates a website using hugo
 		hugo
 		touch awesome-api
 
-build-docker:	## build docker container
-				docker build -t awesome:build ./build
-
 clean: 	## Cleanup the content of the directory dist/
 		rm -rf ./dist
 
@@ -21,13 +18,15 @@ lint:	## lint
 unit-tests:	## test
 			make build
 			make clean
+			touch coverage-units.out
 
 integration-tests:	## test
-			ls
+					ls
+					touch coverage-integrations.out
 
 validate:	## validate
-		ls
+			ls
 
 package:	## package
 			make build
-			zip awesome-website.zip /dist/
+			zip awesome-website.zip dist/

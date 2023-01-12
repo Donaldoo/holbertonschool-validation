@@ -26,6 +26,9 @@ jobs:
       - name: markdownlint
         run: sudo make lint -C module4_task2
 
+      - name: build-docker
+        run: sudo make build-docker -C module4_task2
+
       - name: docker-tests
         run: sudo make docker-tests -C module4_task2
 

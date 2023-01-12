@@ -28,4 +28,4 @@ validate:	## validate
 		ls
 
 package:	## package
-			zip awesome-website.zip dist/
+			zip awesome-website.zip module4_task1/dist/

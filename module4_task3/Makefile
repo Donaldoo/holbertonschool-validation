@@ -13,12 +13,20 @@ help: 	## Shows usage help
 
 lint:	## lint
 		hadolint ./build/Dockerfile
+		hadolint Dockerfile
 
 build-docker:	## build docker container
 				docker build -t awesome:build ./build
+				docker run -d awesome:build
+				./setup.sh
+				make build
+				make package
 
 docker-tests:	## docker test
 				container-structure-test test --image awesome:build --config ./build/cst.yml
+			   
+## container-structure-test test --image awesome:build --config cst.yml
+				
 unit-tests:	## test
 		ls
 
@@ -29,4 +37,5 @@ validate:	## validate
 		ls
 
 package:	## package
-		zip awesome-website.zip dist_hide_from_checker/
+			make build
+			zip awesome-website.zip dist_hide_from_checker/

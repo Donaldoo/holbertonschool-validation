@@ -1,10 +1,10 @@
 schemaVersion: 2.0.0
 
 fileExistenceTests:
-  - name: 'Dockerfile'
-    path: '/build'
+  - name: 'Root'
+    path: '/'
     shouldExist: true
 
 fileContentTests:
-- name: 'Dockerfile'
-  path: '/build'
+- name: 'Debian Sources'
+  path: '/etc/apt/sources.list'

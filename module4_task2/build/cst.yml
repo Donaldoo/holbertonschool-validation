@@ -2,7 +2,18 @@
 schemaVersion: 2.0.0
 
 fileExistenceTests:
-  - name: 'no go binary'
-    path: '/usr/bin/go'
-    shouldExist: false
+  - name: 'Root'
+    path: '/'
+    shouldExist: true
+
+metadataTest:
+  entrypoint: []
+  cmd: ["bash"]
+  workdir: "/module4_task2"
+
+fileContentTests:
+  - name: 'Debian Sources'
+    path: '/etc/apt/sources.list'
+    expectedContents: ['# deb http://snapshot.debian.org/archive/debian/20210208T000000Z buster main']
+    excludedContents: ['.*gce_debian_mirror.*']
 ...

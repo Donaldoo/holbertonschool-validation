@@ -14,7 +14,7 @@ help:  ## Shows usage help
 lint:  ## lint
 	hadolint ./build/Dockerfile
 
-docker-build: ## build docker container
+build-docker:  ## Build docker 
 	docker build -t awesome:build ./build
 
 docker-tests:  ## docker test
@@ -30,4 +30,4 @@ validate:  ## validate
 	ls
 
 package:  ## package
-	zip awesome-website.zip dist_hide_from_checker/
+	zip awesome-website.zip dist/

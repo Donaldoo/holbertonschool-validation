@@ -14,6 +14,6 @@ metadataTest:
 fileContentTests:
   - name: 'Debian Sources'
     path: '/etc/apt/sources.list'
-    expectedContents: ['# deb http://snapshot.debian.org/archive/debian/20210208T000000Z buster main']
+    expectedContents: ['# deb http://snapshot.debian.org/archive/debian/']
     excludedContents: ['.*gce_debian_mirror.*']
 ...

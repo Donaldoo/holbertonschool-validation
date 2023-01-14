@@ -1,32 +1,34 @@
-build: 	## Generates a website using hugo
-		hugo
-		touch awesome-api
+build:  ## Generates a website using hugo
+	hugo
+	touch awesome-api
 
-clean: 	## Cleanup the content of the directory dist/
-		rm -rf ./dist
+clean:  ## Cleanup the content of the directory dist/
+	rm -rf ./dist
 
-post: 	## Create a post with filename and title using the env var POST_TITLE and POST_NAME
-		hugo new posts/$(POST_NAME).md
-		sed -i 's/title: .*/title: "$(POST_TITLE)"/g' ./content/posts/$(POST_NAME).md
+post:  ## Create a post with filename and title using the env var POST_TITLE and POST_NAME
+	hugo new posts/$(POST_NAME).md
+	sed -i 's/title: .*/title: "$(POST_TITLE)"/g' ./content/posts/$(POST_NAME).md
 
-help: 	## Shows usage help
-		@fgrep -h "##" $(MAKEFILE_LIST) | fgrep -v fgrep | sed -e 's/\\$$//' | sed -e 's/##//'
+help:  ## Shows usage help
+	@fgrep -h "##" $(MAKEFILE_LIST) | fgrep -v fgrep | sed -e 's/\\$$//' | sed -e 's/##//'
 
-lint:	## lint
-		cat setup.sh
+lint:  ## lint
+	cat setup.sh
 
-build-docker:	## build docker container
-				docker build -t awesome:build ./build
+build-docker:  ## build docker container
+	docker build -t awesome:build ./build
 
-unit-tests:	## test
-			touch coverage-units.out
+unit-tests:  ## test
+	touch coverage-units.out
 
-integration-tests:	## test
-					ls
-					touch coverage-integrations.out
+integration-tests:  ## test
+	make build
+	make clean
+	touch coverage-integrations.out
 
-validate:	## validate
-			ls
+validate:  ## validate
+	ls
 
-package:	## package
-			zip awesome-website.zip dist_t/
+package:  ## package
+	hugo
+	zip awesome-website.zip dist

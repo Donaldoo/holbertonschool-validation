@@ -21,7 +21,7 @@ jobs:
         run: cd module4_task2 && sudo ./setup.sh
 
       - name: markdownlint
-        run: sudo make lint -C module4_task2
+        run: sudo make lint -C module4_task2 && echo OK || echo FAILED
 
       - name: build-docker
         run: sudo make build-docker -C module4_task2

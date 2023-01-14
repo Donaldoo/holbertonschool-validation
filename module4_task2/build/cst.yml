@@ -10,6 +10,7 @@ metadataTest:
   entrypoint: []
   cmd: ["/bin/sh"]
   workdir: "/module4_task2"
+  user: ""
 
 fileContentTests:
   - name: 'Debian Sources'

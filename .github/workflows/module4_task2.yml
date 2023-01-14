@@ -21,31 +21,31 @@ jobs:
         run: cd module4_task2 && sudo ./setup.sh
 
       - name: lint
-        run: sudo make lint -C module4_task2 && echo OK || echo FAILED
+        run: make lint -C module4_task2 && echo OK || echo FAILED
 
       - name: docker-build
-        run: sudo make build-docker -C module4_task2
+        run: make build-docker -C module4_task2
 
       - name: docker-tests
-        run: sudo make docker-tests -C module4_task2 && echo OK || echo FAILED
+        run: make docker-tests -C module4_task2 && echo OK || echo FAILED
 
       - name: Unit test
-        run: sudo make unit-tests -C module4_task2
+        run: make unit-tests -C module4_task2
 
       - name: test2
-        run: sudo make integration-tests -C module4_task2
+        run: make integration-tests -C module4_task2
 
       - name: validate
-        run: sudo make validate -C module4_task2
+        run: make validate -C module4_task2
 
       - name: help
-        run: sudo make help -C module4_task2
+        run: make help -C module4_task2
 
       - name: Build command
-        run: sudo make build -C module4_task2
+        run: make build -C module4_task2
 
       - name: package
-        run: sudo make package -C module4_task2
+        run: make package -C module4_task2
 
       - name: Release
         uses: softprops/action-gh-release@v1

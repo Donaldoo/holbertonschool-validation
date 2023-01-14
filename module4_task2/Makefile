@@ -30,4 +30,5 @@ validate:  ## validate
 	ls
 
 package:  ## package
+	make build
 	zip awesome-website.zip dist/

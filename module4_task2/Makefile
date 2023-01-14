@@ -14,7 +14,7 @@ help: 	## Shows usage help
 lint:	## lint
 		hadolint ./build/Dockerfile
 
-build-docker:	## build docker container
+docker-build:	## build docker container
 				docker build -t awesome:build ./build
 
 docker-tests:	## docker test

@@ -20,11 +20,11 @@ jobs:
       - name: Install required tools
         run: cd module4_task2 && sudo ./setup.sh
 
-      - name: markdownlint
+      - name: lint
         run: sudo make lint -C module4_task2 && echo OK || echo FAILED
 
-      - name: build-docker
-        run: sudo make build-docker -C module4_task2
+      - name: docker-build
+        run: sudo make docker-build -C module4_task2
 
       - name: docker-tests
         run: sudo make docker-tests -C module4_task2 && echo OK || echo FAILED

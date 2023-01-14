@@ -24,7 +24,7 @@ jobs:
         run: sudo make lint -C module4_task2 && echo OK || echo FAILED
 
       - name: docker-build
-        run: sudo make docker-build -C module4_task2
+        run: sudo make build-docker -C module4_task2
 
       - name: docker-tests
         run: sudo make docker-tests -C module4_task2 && echo OK || echo FAILED

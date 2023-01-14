@@ -1,3 +1,6 @@
+build-docker:  ## build docker container
+	docker build -t awesome:build ./build
+
 build:  ## Generates a website using hugo
 	hugo
 	touch awesome-api
@@ -15,20 +18,14 @@ help:  ## Shows usage help
 lint:  ## lint
 	cat setup.sh
 
-build-docker:  ## build docker container
-	docker build -t awesome:build ./build
-
 unit-tests:  ## test
 	touch coverage-units.out
 
 integration-tests:  ## test
-	make build
-	make clean
 	touch coverage-integrations.out
 
 validate:  ## validate
 	ls
 
 package:  ## package
-	hugo
 	zip awesome-website.zip dist

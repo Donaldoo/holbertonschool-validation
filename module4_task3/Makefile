@@ -27,10 +27,13 @@ unit-tests:	## test
 		ls
 
 integration-tests:	## test
+			make build
+			make clean
 			ls
 
 validate:	## validate
 		ls
 
 package:	## package
-			zip awesome-website.zip dist/
+		hugo
+		zip awesome-website.zip dist/

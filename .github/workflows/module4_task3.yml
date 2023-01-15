@@ -20,6 +20,15 @@ jobs:
       - name: Install required tools
         run: cd module4_task3 && sudo ./setup.sh
 
+      - name: Unit test
+        run: sudo make unit-tests -C module4_task0
+
+      - name: test2
+        run: sudo make integration-tests -C module4_task0
+
+      - name: validate
+        run: sudo make validate -C module4_task0
+
       - name: build-docker
         run: sudo make build-docker -C module4_task3
 

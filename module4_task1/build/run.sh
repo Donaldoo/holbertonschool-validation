@@ -1,13 +1,13 @@
 #!/bin/sh
 
-HUGO_APPEND_PORT="${HUGO_APPEND_PORT:=true}"
-WATCH="${HUGO_WATCH:=false}"
+HUGO_APPEND_PORT="${HUGO_APPEND_PORT:=false}"
+WATCH="${HUGO_WATCH:=true}"
 SLEEP="${HUGO_REFRESH_TIME:=-1}"
 HUGO_DESTINATION="${HUGO_DESTINATION:=/output}"
-echo "HUGO_WATCH:" $WATCH
+echo "HUGO_WATCH:" ${WATCH=true}
 echo "HUGO_REFRESH_TIME:" $HUGO_REFRESH_TIME
-echo "HUGO_THEME:" $HUGO_THEME
-echo "HUGO_BASEURL" $HUGO_BASEURL
+echo "HUGO_THEME:" ${HUGO_THEME=ananke}
+echo "HUGO_BASEURL" ${HUGO_BASEURL=http://example.org/}
 echo "ARGS" $@
 
 HUGO=/usr/local/sbin/hugo

@@ -28,5 +28,4 @@ validate:  ## validate
 	ls
 
 package:  ## package
-	mkdir dist
 	zip awesome-website.zip dist

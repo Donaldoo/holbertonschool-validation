@@ -16,11 +16,8 @@ lint:	## lint
 		hadolint Dockerfile
 
 build-docker:	## build docker container
-				docker build -t awesome:build ./build
-				docker run -d awesome:build
-				./setup.sh
-				make build
-				make package
+				docker build -t awesome:build .
+				docker run --name "my-hugo" -P -v $(pwd):/src awesome:build
 
 docker-tests:	## docker test
 				container-structure-test test --image awesome:build --config ./build/cst.yml
@@ -36,5 +33,4 @@ validate:	## validate
 		ls
 
 package:	## package
-			make build
 			zip awesome-website.zip dist/

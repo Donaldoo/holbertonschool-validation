@@ -1,9 +1,29 @@
-FROM golang:1.15.8-buster
+FROM golang:1.19-alpine AS build
 
-RUN apt install git && \
-    git clone https://github.com/Donaldoo/holbertonschool-validation.git
+LABEL description="Docker container for building static sites with the Hugo static site generator."
+LABEL maintainer="Donaldo"
 
-RUN apt-get update && \
-    curl -Lo install_hugo.deb https://github.com/gohugoio/hugo/releases/download/v0.109.0/hugo_extended_0.109.0_linux-amd64.deb && \
-    apt-get install ./install_hugo.deb && \
-    rm install_hugo.deb
+# config
+ENV HUGO_VERSION=0.109.0
+#ENV HUGO_TYPE=
+ENV HUGO_TYPE=_extended
+
+COPY ./run.sh /run.sh
+ENV HUGO_ID=hugo${HUGO_TYPE}_${HUGO_VERSION}
+RUN wget -O - https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/${HUGO_ID}_Linux-64bit.tar.gz | tar -xz -C /tmp \
+    && mkdir -p /usr/local/sbin \
+    && mv /tmp/hugo /usr/local/sbin/hugo \
+    && rm -rf /tmp/${HUGO_ID}_linux_amd64
+
+RUN apk add --update git asciidoctor libc6-compat libstdc++ \
+    && apk upgrade \
+    && apk add --no-cache ca-certificates \
+    && chmod 0777 /run.sh
+
+VOLUME /src
+VOLUME /output
+
+WORKDIR /src
+CMD ["/run.sh"]
+
+EXPOSE 1313

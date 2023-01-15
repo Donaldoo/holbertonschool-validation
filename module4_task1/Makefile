@@ -1,6 +1,5 @@
 build-docker:  ## build docker container
 	docker build -t awesome:build ./build
-	docker run -i "awesome:build" make -C holbertonschool-validation/module4_task1 clean lint build unit-tests integration-tests
 
 build:  ## Generates a website using hugo
 	hugo

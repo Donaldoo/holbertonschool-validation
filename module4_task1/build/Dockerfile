@@ -1,11 +1,9 @@
 FROM golang:1.15.8-buster
 
-WORKDIR /usr/src/app
+RUN apt install git && \
+    git clone https://github.com/Donaldoo/holbertonschool-validation.git
 
-COPY go.mod go.sum ./
-RUN go mod download && go mod verify
-
-COPY . .
-RUN go build -v -o /usr/local/bin/app ./...
-
-CMD ["app"]
+RUN apt-get update && \
+    curl -Lo install_hugo.deb https://github.com/gohugoio/hugo/releases/download/v0.109.0/hugo_extended_0.109.0_linux-amd64.deb && \
+    apt-get install ./install_hugo.deb && \
+    rm install_hugo.deb

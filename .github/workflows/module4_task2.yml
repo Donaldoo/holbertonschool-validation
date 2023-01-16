@@ -23,21 +23,6 @@ jobs:
       - name: lint
         run: make lint -C module4_task2 && echo OK || echo FAILED
 
-      - name: docker-build
-        run: make build-docker -C module4_task2
-
-      - name: docker-tests
-        run: make docker-tests -C module4_task2 && echo OK || echo FAILED
-
-      - name: Unit test
-        run: make unit-tests -C module4_task2
-
-      - name: test2
-        run: make integration-tests -C module4_task2
-
-      - name: validate
-        run: make validate -C module4_task2
-
       - name: help
         run: make help -C module4_task2
 
@@ -69,4 +54,14 @@ jobs:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
         timeout-minutes: 1
+
+      - name: docker-build
+        run: make build-docker -C module4_task2
+
+      - name: make-tests
+        run: docker run -i "awesome:build" make -C module4_task2 clean build \
+        unit-tests integration-tests
+
+      - name: docker-tests
+        run: make docker-tests -C module4_task2 && echo OK || echo FAILED
 ...

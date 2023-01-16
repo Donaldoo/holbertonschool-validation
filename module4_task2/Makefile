@@ -11,23 +11,11 @@ post:  ## Create a post with filename and title using the env var POST_TITLE and
 help:  ## Shows usage help
 	@fgrep -h "##" $(MAKEFILE_LIST) | fgrep -v fgrep | sed -e 's/\\$$//' | sed -e 's/##//'
 
-lint:  ## lint
-	docker run --rm -i hadolint/hadolint < ./build/Dockerfile
-
-build-docker:  ## Build docker 
-	docker build -t awesome:build ./build
-	docker run awesome:build
-
-docker-tests:  ## docker test
-	container-structure-test test --image awesome:build --config ./build/cst.yml
-
 unit-tests:  ## test
-	ls
+	touch coverage-units.out
 
 integration-tests:  ## test
-		make build
-		make clean
-		ls
+		touch coverage-integrations.out
 
 validate:  ## validate
 	ls
@@ -35,3 +23,12 @@ validate:  ## validate
 package:  ## package
 	hugo
 	zip awesome-website.zip dist
+
+lint:  ## lint
+	hadolint ./build/Dockerfile
+
+build-docker:  ## Build docker 
+	docker build -t awesome:build ./build
+
+docker-tests:  ## docker test
+	container-structure-test test --image awesome:build --config ./build/cst.yml

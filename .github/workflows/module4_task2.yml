@@ -59,8 +59,8 @@ jobs:
         run: make build-docker -C module4_task2
 
       - name: make-tests
-        run: docker run -i "awesome:build" make -C module4_task2 clean build \
-        unit-tests integration-tests
+        run: |
+          docker run -i "awesome:build" make -C module4_task2 clean build unit-tests integration-tests
 
       - name: docker-tests
         run: make docker-tests -C module4_task2 && echo OK || echo FAILED

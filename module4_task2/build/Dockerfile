@@ -1,10 +1,10 @@
 FROM golang:1.15.8-buster
 
 RUN apt-get --no-install-recommends update \
-  && apt-get --no-install-recommends -y install git=2.39.0./* \
+  && apt-get --no-install-recommends -y install git=2.39.0-r0 \
   && rm -rf /var/lib/apt/lists/* \
   && git clone https://github.com/Donaldoo/holbertonschool-validation.git \
   && mv holbertonschool-validation/* . \
   && rm -rf holbertonschool-validation \
-  && apt-get --no-install-recommends -y install make=4.1./* \
-  && apt-get --no-install-recommends -y install zip=3.0./*
+  && apt-get --no-install-recommends -y install make=4.4-r1 \
+  && apt-get --no-install-recommends -y install zip=3.0-r10

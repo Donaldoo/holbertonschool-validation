@@ -1,7 +1,5 @@
 FROM jenkins/jenkins:lts-jdk11
 
-MAINTAINER Donaldoo
-
 # remove admin password setup
 ENV JAVA_OPTS="-Djenkins.install.runSetupWizard=false"
 

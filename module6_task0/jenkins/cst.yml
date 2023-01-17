@@ -10,5 +10,5 @@ commandTests:
         - name: "Java version is correct"
           command: "java"
           args: ["--version"]
-          expectedOutput: ["openjdk 11"]
+          expectedOutput: ["openjdk 11.0.17"]
 ...
